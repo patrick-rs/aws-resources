@@ -1,0 +1,5 @@
+# ignore everything except for the build folder
+*
+
+!lambda/code
+!lambda/build

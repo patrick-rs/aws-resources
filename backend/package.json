@@ -1,0 +1,27 @@
+{
+  "name": "resources",
+  "version": "0.1.0",
+  "bin": {
+    "resources": "bin/resources.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk",
+    "compile": "docker build -t aws-resources-build-image . && docker run -v /home/pat/dev/aws/resources/backend/lambda:/lambda/  aws-resources-build-image:latest"
+  },
+  "devDependencies": {
+    "@types/node": "^10.17.26",
+    "typescript": "~3.7.2"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-apigateway": "^1.61.1",
+    "@aws-cdk/aws-dynamodb": "^1.61.1",
+    "@aws-cdk/aws-iam": "^1.61.1",
+    "@aws-cdk/aws-lambda": "^1.61.1",
+    "@aws-cdk/aws-s3-assets": "^1.61.1",
+    "@aws-cdk/core": "^1.61.1",
+    "source-map-support": "^0.5.19"
+  }
+}
